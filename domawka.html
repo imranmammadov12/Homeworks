@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+</head>
+<body>
+
+<ul id="socialLinks">
+  <li><a href="https://facebook.com">Facebook</a></li>
+  <li><a href="https://twitter.com">Twitter</a></li>
+  <li><a href="https://instagram.com">Instagram</a></li>
+  <li><a href="https://linkedin.com">LinkedIn</a></li>
+  <li><a href="https://pinterest.com">Pinterest</a></li>
+  <li><a href="https://youtube.com">YouTube</a></li>
+  <li><a href="https://tiktok.com">TikTok</a></li>
+  <li><a href="https://reddit.com">Reddit</a></li>
+  <li><a href="https://snapchat.com">Snapchat</a></li>
+  <li><a href="https://tumblr.com">Tumblr</a></li>
+</ul>
+    <script>
+
+ const socialLinks = document.getElementById('socialLinks').getElementsByTagName('a');
+
+const colors = [
+  'red',
+  'blue',
+  'green',
+  'orange',
+  'purple',
+  'yellow',
+  'cyan',
+  'magenta',
+  'brown',
+  'pink'
+];
+
+
+for (let i = 0; i < socialLinks.length; i++) {
+  socialLinks[i].addEventListener('mouseover', function() {
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+    this.style.color = randomColor;
+  });
+
+  socialLinks[i].addEventListener('click', function(event) {
+    event.preventDefault();
+  });
+}
+    </script>
+
+</body>

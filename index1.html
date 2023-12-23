@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Кнопка с 10 слушателями</title>
+</head>
+<body>
+
+<button id="myButton">Click</button>
+
+<script>
+    const button = document.querySelector('#myButton');
+
+    for (let i = 1; i <= 10; i++) {
+    button.addEventListener('click', function() {
+      console.log(i);
+    });
+  }
+
+    function askNumber(){
+        const userInput = (prompt('Enter the number: from 1 to 10'));
+    if (isNaN(userInput) || userInput < 1 || userInput > 10) {
+      return askNumber(); 
+    }
+    return userInput;
+  }
+  button.addEventListener('click', function() {
+    const number = askNumber();
+    for (let i = 1; i <= number; i++) {
+      console.log(i);
+    }
+  });
+</script>
+</body>
+</html>
+  
